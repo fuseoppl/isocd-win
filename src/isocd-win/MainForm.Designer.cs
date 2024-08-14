@@ -54,6 +54,7 @@
             this.srcTextBox.Name = "srcTextBox";
             this.srcTextBox.Size = new System.Drawing.Size(355, 20);
             this.srcTextBox.TabIndex = 2;
+            this.srcTextBox.TextChanged += new System.EventHandler(this.srcTextBox_TextChanged);
             // 
             // startBuildButton
             // 
@@ -80,6 +81,7 @@
             this.imgTextBox.Name = "imgTextBox";
             this.imgTextBox.Size = new System.Drawing.Size(355, 20);
             this.imgTextBox.TabIndex = 5;
+            this.imgTextBox.TextChanged += new System.EventHandler(this.imgTextBox_TextChanged);
             // 
             // outputFileLabel
             // 
