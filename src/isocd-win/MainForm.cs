@@ -349,5 +349,15 @@ namespace isocd_win {
             configManager.Options.TargetSystem = configManager.Options.TargetSystem = (TargetSystemType)targetSystemComboBox.SelectedIndex;
             SetSystemLogo();
         }
+
+        private void srcTextBox_TextChanged(object sender, EventArgs e)
+        {
+            UpdateConfigFromForm();
+        }
+
+        private void imgTextBox_TextChanged(object sender, EventArgs e)
+        {
+            UpdateConfigFromForm();
+        }
     }
 }
