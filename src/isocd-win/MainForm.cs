@@ -82,11 +82,11 @@ namespace isocd_win {
         }
 
         void SetSystemLogo() {
-            switch(targetSystemComboBox.SelectedItem) {
-                case TargetSystemType.CD32:
+            switch(targetSystemComboBox.SelectedIndex) {
+                case (int)TargetSystemType.CD32:
                     targetSystemPictureBox.Image = Resources.amiga_cd32;
                     break;
-                case TargetSystemType.CDTV:
+                case (int)TargetSystemType.CDTV:
                     targetSystemPictureBox.Image = Resources.commodore_cdtv;
                     break;
                 default:
@@ -161,11 +161,11 @@ namespace isocd_win {
                 file = Path.GetFileName(imgTextBox.Text);
             }
             else {
-                switch(targetSystemComboBox.SelectedItem) {
-                    case TargetSystemType.CD32:
+                switch(targetSystemComboBox.SelectedIndex) {
+                    case (int)TargetSystemType.CD32:
                         file = "cd32.iso";
                         break;
-                    case TargetSystemType.CDTV:
+                    case (int)TargetSystemType.CDTV:
                         file = "cdtv.iso";
                         break;
                     default:
@@ -201,12 +201,12 @@ namespace isocd_win {
             configManager.Options.OutputFile = imgTextBox.Text;
             configManager.Options.TargetSystem = (TargetSystemType)targetSystemComboBox.SelectedIndex;
 
-            switch(targetSystemComboBox.SelectedItem) {
-                case TargetSystemType.CD32:
+            switch(targetSystemComboBox.SelectedIndex) {
+                case (int)TargetSystemType.CD32:
                     configManager.Options.Trademark = true;
                     configManager.Options.TrademarkFile = Path.Combine(isocd_builder_constants.ISOCDWIN_PUBLIC_DOCUMENTS_PATH, isocd_builder_constants.CD32_TRADEMARK_FILE);
                     break;
-                case TargetSystemType.CDTV:
+                case (int)TargetSystemType.CDTV:
                     configManager.Options.Trademark = true;
                     configManager.Options.TrademarkFile = Path.Combine(isocd_builder_constants.ISOCDWIN_PUBLIC_DOCUMENTS_PATH, isocd_builder_constants.CDTV_TRADEMARK_FILE);
                     break;
